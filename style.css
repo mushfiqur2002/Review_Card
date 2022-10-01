@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    justify-content:center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: #EEEEEE;
+}
+h1{
+    position: absolute;
+    top: 180px;
+}
+h1::after{
+    content: '';
+    position:absolute;
+    top: 40px;
+    right: 0px;
+    width: 50%;
+    height: 5px;
+    background: #1F3C88;
+}
+.container{
+    width: 750px;
+    height: 400px;
+    background: #F1F6F9;
+    box-shadow: 15px 15px 50px 15px rgba(0,0,0,0.2);
+    border-radius: 15px;
+}
+.container .article,
+.container .button{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+.container .article{
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.container .article .image_div{
+    width: 100px;
+    height: 100px;
+    background: #25316D;
+    border-radius: 50%;
+    position: relative;
+}
+.container .article .image_div::after{
+    content: '"';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background:#25316D;
+    color: #eeeeee;
+    border-radius: 50%;
+    right: 70px;
+    font-size: 40px;
+}
+.container .article .image_div img{
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+}
+.container .article .paragraph p{
+    padding: 20px 50px 15px 50px;
+    font-size: 19px;
+    word-spacing: 2px;
+    color: #555555;
+}
+.container .article .paragraph #work{
+    color: #366ED8;
+    padding: 10px 0px 0px 0px;
+}
+.container .article .paragraph #name{
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+.container .button{
+    height: 10%;
+    justify-content: center;
+    gap:20px;
+    position: relative;
+    top: -10px;
+}
+.container .button button{
+    padding: 5px 15px 5px 15px; 
+    font-size: 15px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1400px){
+    h1{
+        top: 80px;
+    }
+}
+@media only screen and (max-width: 600px){
+    h1{
+        top: 60px;
+    }
+    .container{
+        width: 500px;
+        height: 500px;
+    }
+}
+@media only screen and (max-width: 425px){
+    .container{
+        width: 350px;
+        height: 550px;
+    }
+    .container .article .paragraph p{
+        padding: 20px 15px 15px 15px;
+    }
+}
